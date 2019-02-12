@@ -30,3 +30,6 @@ serviceWorker.unregister();
 // 13. Install Radium and use it with a pseudo function
 // 14. Use media queries with radium
 // 15. Converting css files to modules
+// 16. Add pseudo classes
+// 17. Assign class based on condition
+// 18. Adding media queries

@@ -48,16 +48,8 @@ class App extends Component {
   };
 
   render() {
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer',
-    };
-
     let person = null;
+    var buttonClass = null;
 
     if(this.state.showPerson) {
       person = 
@@ -71,8 +63,7 @@ class App extends Component {
                   changeName={this.changeNameHandler.bind(this, person.id)}/>
         })}
       </div>
-
-      style.backgroundColor = 'red';
+      buttonClass = classes.Red;
     };
 
     const assignedClass = [];
@@ -87,7 +78,7 @@ class App extends Component {
       <div className={classes.App}>
         <h1>Hi, I am a react App</h1>
         <p className={assignedClass.join(' ')}>Warning!</p>
-        <button style={style} onClick={this.togglePerson}>Switch Name</button>
+        <button className={buttonClass} onClick={this.togglePerson}>Switch Name</button>
         {person}
       </div>
       // React.createElement('div', null, React.createElement('h1', {className: 'App'}, 'Is it working now?'))
