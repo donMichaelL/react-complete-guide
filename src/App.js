@@ -75,7 +75,7 @@ class App extends Component {
     };
 
     return (
-      <div className={classes.App}>
+      <div className={["myclass", classes.App].join(' ')}>
         <h1>Hi, I am a react App</h1>
         <p className={assignedClass.join(' ')}>Warning!</p>
         <button className={buttonClass} onClick={this.togglePerson}>Switch Name</button>

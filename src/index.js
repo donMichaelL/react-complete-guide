@@ -33,3 +33,4 @@ serviceWorker.unregister();
 // 16. Add pseudo classes
 // 17. Assign class based on condition
 // 18. Adding media queries
+// 19. Use global css classes
