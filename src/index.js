@@ -35,3 +35,5 @@ serviceWorker.unregister();
 // 18. Adding media queries
 // 19. Use global css classes
 // 20. Use debug
+
+// 21. Create a list as an individual component without state
