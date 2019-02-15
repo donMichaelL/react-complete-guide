@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
 import Persons from '../components/Persons/Persons';
-
+import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
   state = {
@@ -50,7 +50,6 @@ class App extends Component {
 
   render() {
     let person = null;
-    var buttonClass = null;
 
     if(this.state.showPerson) {
       person = 
@@ -60,22 +59,14 @@ class App extends Component {
           clicked={this.deleteHandler}
           changed={this.changeNameHandler}/>
       </div>
-      buttonClass = classes.Red;
-    };
-
-    const assignedClass = [];
-    if (this.state.people.length <=2){
-      assignedClass.push( classes.red );
-    };
-    if (this.state.people.length <=1){
-      assignedClass.push( classes.bold );
     };
 
     return (
       <div className={["myclass", classes.App].join(' ')}>
-        <h1>Hi, I am a react App</h1>
-        <p className={assignedClass.join(' ')}>Warning!</p>
-        <button className={buttonClass} onClick={this.togglePerson}>Switch Name</button>
+        <Cockpit 
+          clicked={this.togglePerson} 
+          people={this.state.people}
+          showPerson={this.state.showPerson}/>
         {person}
       </div>
       // React.createElement('div', null, React.createElement('h1', {className: 'App'}, 'Is it working now?'))
