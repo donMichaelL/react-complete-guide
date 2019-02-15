@@ -2,9 +2,7 @@ import React from 'react';
 import Person from './Person/Person'
 
 
-const Persons = (props) => (
-    <div>
-        {   
+const Persons = (props) => 
             props.people.map((person, index)=>
             <Person
                 key={person.id}
@@ -14,9 +12,7 @@ const Persons = (props) => (
                 changed={props.changed.bind(this, person.id)}
             />
             )
-        }
-    </div>
-);
+
 
 
 export default Persons
