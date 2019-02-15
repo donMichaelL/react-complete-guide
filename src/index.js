@@ -34,3 +34,4 @@ serviceWorker.unregister();
 // 17. Assign class based on condition
 // 18. Adding media queries
 // 19. Use global css classes
+// 20. Use debug
