@@ -4,7 +4,7 @@ import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App appTitle="Product Manager"/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -37,3 +37,5 @@ serviceWorker.unregister();
 // 20. Use debug
 
 // 21. Create a list as an individual component without state
+// 22. Understand lifecyle concepts
+// 23. Create constructor and call super
