@@ -18,6 +18,15 @@ class App extends Component {
     console.log('[App.js] component did mount');
   }
 
+  shouldComponentUpdate(nextPros, nextState) {
+    console.log('[Apps.js] should component udpate');
+    return true;
+  }
+
+  componentDidUpdate() {
+    console.log('[App.js] component did updated');
+  }
+
   state = {
     people: [
       {id: "asdfasdfsd", name: "Michael", age: 31},
