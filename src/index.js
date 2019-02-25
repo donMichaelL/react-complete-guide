@@ -39,3 +39,8 @@ serviceWorker.unregister();
 // 21. Create a list as an individual component without state
 // 22. Understand lifecyle concepts
 // 23. Create constructor and call super
+// 24. Prevent updating a component when props remain the same (shouldComponentUpdate)
+// 25. Use PureComponent
+
+// 1. Create an aux component
+// 2. embed fonts from google

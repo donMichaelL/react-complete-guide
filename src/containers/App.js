@@ -34,7 +34,8 @@ class App extends Component {
       {id: "fdwasdfasgd", name: "Nick", age:15}
     ],
     anotherAttribute: 'hello',
-    showPerson: false
+    showPerson: false,
+    showCockpit: true
   }
 
   deleteHandler = (index) => {
@@ -87,11 +88,16 @@ class App extends Component {
 
     return (
       <div className={["myclass", classes.App].join(' ')}>
-        <Cockpit
-          title={this.props.appTitle}
-          clicked={this.togglePerson} 
-          people={this.state.people}
-          showPerson={this.state.showPerson}/>
+        <button onClick={()=> {
+          this.setState({showCockpit: false})
+        }}>Remove Cockpit</button>
+        { this.state.showCockpit ? 
+          <Cockpit
+            title={this.props.appTitle}
+            clicked={this.togglePerson} 
+            peopleLength={this.state.people.length}
+            showPerson={this.state.showPerson}/> : null   
+        }
         {person}
       </div>
       // React.createElement('div', null, React.createElement('h1', {className: 'App'}, 'Is it working now?'))

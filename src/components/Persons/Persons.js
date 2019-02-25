@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Person from './Person/Person'
 
 
-class Persons extends Component {
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('[Persons.js] shouldComponentUpdate');
-        return true;
-    }
+class Persons extends PureComponent {
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     // console.log('[Persons.js] shouldComponentUpdate');
+    //     // return true;
+    //     if(nextProps.people !== this.props.people) {
+    //         return true;
+    //     }
+    //     return false;
+    // };
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('[Persons.js] getSnapshotBeforeUpdate');
@@ -16,6 +20,10 @@ class Persons extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log('[Persons.js] componentDidUpdate');
         console.log(snapshot);
+    }
+
+    componentWillUnmount() {
+        console.log('[Persons.js] componenent will unmount');
     }
 
     render() {
