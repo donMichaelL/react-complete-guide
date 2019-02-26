@@ -42,5 +42,5 @@ serviceWorker.unregister();
 // 24. Prevent updating a component when props remain the same (shouldComponentUpdate)
 // 25. Use PureComponent
 
-// 1. Create an aux component
+// 1. Create an aux component or React.Fragment
 // 2. embed fonts from google
